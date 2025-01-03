@@ -14,7 +14,6 @@ import java.util.List;
 public class EmailService {
     @Autowired
     EmailClient emailClient;
-
     Dotenv dotenv = Dotenv.load();
     String apiKey = dotenv.get("SENDINBLUE_API_KEY");
     public EmailResponse sendEmail(ClientEmailRequest clientEmailRequest){
