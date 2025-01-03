@@ -18,6 +18,7 @@ public class EmailService {
     Dotenv dotenv = Dotenv.load();
     String apiKey = dotenv.get("SENDINBLUE_API_KEY");
 
+
     public EmailResponse sendEmail(ClientEmailRequest clientEmailRequest){
         EmailRequest emailRequest= EmailRequest.builder()
                 .sender(Sender.builder()
