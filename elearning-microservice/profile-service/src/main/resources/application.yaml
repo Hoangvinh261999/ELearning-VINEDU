@@ -1,0 +1,31 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: Elearning-profile-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/elearning_profile_service
+    username: root
+    password: hoangvinh99
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  data:
+    jdbc:
+      dialect: mysql
+
+open:
+  api:
+    title: Api E-learning Document
+    version: v1.0.0
+    description: E-learning Document
+    serverName: Sever Test
+    serverUrl: http://localhost:8089
+
+logging:
+  level:
+    com.zaxxer.hikari: ERROR
+    org.springframework.jdbc.core: ERROR
+    org.springframework.transaction: ERROR
+    org.hibernate: ERROR

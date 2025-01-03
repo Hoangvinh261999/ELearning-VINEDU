@@ -1,0 +1,35 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: Elearning
+  datasource:
+    url: jdbc:mysql://localhost:3306/elearning_authservice
+    username: root
+    password: hoangvinh99
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  data:
+    jdbc:
+      dialect: mysql
+  kafka:
+    bootstrap-servers: http://localhost:9094
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+open:
+  api:
+    title: Api E-learning Document
+    version: v1.0.0
+    description: E-learning Document
+    serverName: Sever Test
+    serverUrl: http://localhost:8089
+
+logging:
+  level:
+    com.zaxxer.hikari: ERROR
+    org.springframework.jdbc.core: ERROR
+    org.springframework.transaction: ERROR
+    org.hibernate: ERROR
